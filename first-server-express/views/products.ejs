@@ -1,0 +1,20 @@
+<%- include('partials/head.ejs') %>
+
+    <ul>
+        <% items.forEach((item) => { %>
+            <li><%= item.name %></li>
+        <% }) %>
+    </ul>
+
+    <h3>Añadir nuevo producto</h3>
+    <form action="/new-product" method="POST">
+        <input type="text" name="newItem" id="newItem">
+        <button type="submit">Añadir producto</button>
+    </form> 
+
+    <!--<script>
+        const txtItem = document.querySelector('#newItem')
+        txtItem.focus();
+    </script>-->
+
+<%- include('partials/footer.ejs') %>    
